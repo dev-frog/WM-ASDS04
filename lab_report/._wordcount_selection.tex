@@ -1,0 +1,5 @@
+    print('Precision: ', metrics.precision_score(y_test, y_pred))
+    print('Recall (Sensitivity): ', metrics.recall_score(y_test, y_pred))
+    tn, fp, fn, tp = metrics.confusion_matrix(y_test, y_pred).ravel()
+    specificity = tn / (tn + fp)
+    print('Specificity: ', specificity)
